@@ -28,5 +28,9 @@ int main(){
     
     int sum2 = sumArray(arr, 5); // Add up first five elements
     std::cout << "Sum is " << sum2 << "\n";  // Sum is 34
+
+    std::cout << isAlphanumeric("ABCD") << "\n";        // true (1)
+    std::cout << isAlphanumeric("Abcd1234xyz") << "\n"; // true (1)
+    std::cout << isAlphanumeric("KLMN 8-7-6") << "\n";  // false (0)
     return 0;
 }
