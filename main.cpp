@@ -2,14 +2,17 @@
 #include "recursion.h"
 
 int main(){
+    std::cout << "\nTask A\n";
     printRange(-2, 10);
 
+    std::cout << "\nTask B\n";
     int x = sumRange(1, 3);
     std::cout << x << "\n";   // 6
 
     int y = sumRange(-2, 10);
     std::cout << y << "\n";   // 52
 
+    std::cout << "\nTask C\n";
     int size = 10;
     int *arr = new int[size]; // allocate array dynamically
     arr[0] = 12;
@@ -28,9 +31,23 @@ int main(){
     
     int sum2 = sumArray(arr, 5); // Add up first five elements
     std::cout << "Sum is " << sum2 << "\n";  // Sum is 34
-
+    
+    std::cout << "\nTask D\n";
+    
     std::cout << isAlphanumeric("ABCD") << "\n";        // true (1)
     std::cout << isAlphanumeric("Abcd1234xyz") << "\n"; // true (1)
     std::cout << isAlphanumeric("KLMN 8-7-6") << "\n";  // false (0)
+
+    std::cout << "\nTask E\n";
+
+    std::cout << nestedParens("((()))") << "\n";      // true (1)
+    std::cout << nestedParens("()") << "\n";          // true (1)
+    std::cout << nestedParens("") << "\n";            // true (1)
+
+    std::cout << nestedParens("(((") << "\n";         // false (0)
+    std::cout << nestedParens("(()") << "\n";         // false (0)
+    std::cout << nestedParens(")(") << "\n";          // false (0)
+    std::cout << nestedParens("a(b)c") << "\n";       // false (0)
+
     return 0;
 }

@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include "recursion.h"
 
 void printRange(int left, int right){
@@ -34,6 +35,21 @@ bool isAlphanumeric(std::string s){
         return isAlphanumeric(s.substr(1));
     }
     else {
+        return false;
+    }
+}
+
+bool nestedParens(std::string s){
+    if(s.length() == 0){
+        return true;
+    }
+    else if(s.length() == 1){
+        return false;
+    }
+    else if(s[0] + 1 == s[s.length() - 1]){
+        return nestedParens(s.substr(1, s.length() - 2));
+    }
+    else{
         return false;
     }
 }
