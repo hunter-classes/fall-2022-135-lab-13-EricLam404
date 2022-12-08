@@ -16,3 +16,12 @@ int sumRange(int left, int right){
         return left + sumRange(left + 1, right);
     }
 }
+
+int sumArray(int *arr, int size){
+    if(size == 1){
+        return *arr;
+    }
+    else{
+        return *(arr + (size-1)) + sumArray(arr, size - 1);
+    }
+}
