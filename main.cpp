@@ -3,7 +3,7 @@
 
 int main(){
     std::cout << "\nTask A\n";
-    printRange(-2, 10);
+    std::cout << printRange(-2, 10) << "\n";
 
     std::cout << "\nTask B\n";
     int x = sumRange(1, 3);
@@ -34,20 +34,20 @@ int main(){
     
     std::cout << "\nTask D\n";
     
-    std::cout << isAlphanumeric("ABCD") << "\n";        // true (1)
-    std::cout << isAlphanumeric("Abcd1234xyz") << "\n"; // true (1)
-    std::cout << isAlphanumeric("KLMN 8-7-6") << "\n";  // false (0)
+    std::cout << std::boolalpha << isAlphanumeric("ABCD") << "\n";        // true (1)
+    std::cout << std::boolalpha <<  isAlphanumeric("Abcd1234xyz") << "\n"; // true (1)
+    std::cout << std::boolalpha <<  isAlphanumeric("KLMN 8-7-6") << "\n";  // false (0)
 
     std::cout << "\nTask E\n";
 
-    std::cout << nestedParens("((()))") << "\n";      // true (1)
-    std::cout << nestedParens("()") << "\n";          // true (1)
-    std::cout << nestedParens("") << "\n";            // true (1)
+    std::cout << std::boolalpha <<  nestedParens("((()))") << "\n";      // true (1)
+    std::cout << std::boolalpha <<  nestedParens("()") << "\n";          // true (1)
+    std::cout << std::boolalpha <<  nestedParens("") << "\n";            // true (1)
 
-    std::cout << nestedParens("(((") << "\n";         // false (0)
-    std::cout << nestedParens("(()") << "\n";         // false (0)
-    std::cout << nestedParens(")(") << "\n";          // false (0)
-    std::cout << nestedParens("a(b)c") << "\n";       // false (0)
+    std::cout << std::boolalpha <<  nestedParens("(((") << "\n";         // false (0)
+    std::cout << std::boolalpha <<  nestedParens("(()") << "\n";         // false (0)
+    std::cout << std::boolalpha <<  nestedParens(")(") << "\n";          // false (0)
+    std::cout << std::boolalpha <<  nestedParens("a(b)c") << "\n";       // false (0)
 
     return 0;
 }
